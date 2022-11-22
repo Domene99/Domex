@@ -1,0 +1,36 @@
+program MultiplyTwoPolyFuncs;
+var
+int : vector[4], vector1[3], res[6], i, j;
+
+main() {
+    vector[0] = 1;
+    vector[1] = 2;
+    vector[2] = 3;
+    vector[3] = 4;
+
+    vector1[0] = 4;
+    vector1[1] = 5;
+    vector1[2] = 6;
+
+    print("multiplying: ");
+    i = 0;
+    while (i < 4) {
+        print(vector[i], "x^", i);
+        i = i + 1;
+    }
+    print("by: ");
+    i = 0;
+    while (i < 3) {
+        print(vector1[i], "x^", i);
+        i = i + 1;
+    }
+
+    res = vector .^. vector1;
+
+    print("result: ");
+    i = 0;
+    while (i < 6) {
+        print(res[i], "x^", i);
+        i = i + 1;
+    }
+}

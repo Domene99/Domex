@@ -1,0 +1,37 @@
+program MatrixMult;
+var
+int : vector[2][2], vector1[2][2], res[2][2], i, j;
+
+main() {
+    vector[0][0] = 10;
+    vector[0][1] = 20;
+    vector[1][0] = 30;
+    vector[1][1] = 40;
+
+    vector1[0][0] = 100;
+    vector1[0][1] = 200;
+    vector1[1][0] = 300;
+    vector1[1][1] = 400;
+
+    print("multiplying: ");
+    i = 0;
+    while (i < 2) {
+        print(vector[i][0], vector[i][1]);
+        i = i + 1;
+    }
+    print("by: ");
+    i = 0;
+    while (i < 2) {
+        print(vector1[i][0], vector1[i][1]);
+        i = i + 1;
+    }
+
+    res = vector * vector1;
+
+    print("result:");
+    i = 0;
+    while (i < 2) {
+        print(res[i][0], res[i][1]);
+        i = i + 1;
+    }
+}

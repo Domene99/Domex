@@ -1,0 +1,22 @@
+program MatrixLoop;
+var
+float : pi[3][3];
+int : iX, iY;
+
+main() {
+    iX = 0;
+    while (iX < 3) {
+        iY = 0;
+        while (iY < 3) {
+            print("Input matrix value", iX, iY);
+            input(pi[iX][iY]);
+            iY = iY + 1;
+        }
+        iX = iX + 1;
+    }
+    iX = 0;
+    while (iX < 3) {
+        print(pi[iX][0], pi[iX][1], pi[iX][2]);
+        iX = iX + 1;
+    }
+}

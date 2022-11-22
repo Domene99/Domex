@@ -1,0 +1,40 @@
+program Find;
+var
+int : nums[10], iX, to_find, found;
+
+main() {
+    nums[0] = 0;
+    nums[1] = 10;
+    nums[2] = 20;
+    nums[3] = 30;
+    nums[4] = 40;
+    nums[5] = 50;
+    nums[6] = 60;
+    nums[7] = 70;
+    nums[8] = 80;
+    nums[9] = 90;
+    print("What value do you wish to find?");
+    input(to_find);
+    print("finding:", to_find);
+    print("In array:");
+    
+    iX = 0;
+    
+    while (iX < 10) {
+        print(nums[iX]);
+        iX = iX + 1;
+    }
+
+    iX = 0;
+    found = 0;
+    while (iX < 10) {
+        if (nums[iX] == to_find) {
+            print("found at: ", iX);
+            found = 1;
+        }
+        iX = iX + 1;
+    }
+    if (found == 0) {
+        print("num not in array");
+    }
+}

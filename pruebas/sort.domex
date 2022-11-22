@@ -1,0 +1,38 @@
+program Find;
+var
+int : vector[10], i;
+
+function void sort() {
+    var int : i, j, min, tmp;
+    i = 0;
+    while (i < 9) {
+        min = i;
+        j = i + 1;
+        while (j < 10) {
+            if (vector[j] < vector[min]) {
+                min = j;
+            }
+            j = j + 1;
+        }
+        tmp = vector[i];
+        vector[i] = vector[min];
+        vector[min] = tmp;
+        i = i + 1;
+    }
+}
+
+main() {
+    print("input 10 values");
+    i = 0;
+    while(i < 10) {
+        input(vector[i]);
+        i = i + 1;
+    }
+    sort();
+    print("sorted:");
+    i = 0;
+    while (i < 10) {
+        print(vector[i]);
+        i = i + 1;
+    }
+}

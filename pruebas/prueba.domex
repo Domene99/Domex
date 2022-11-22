@@ -1,0 +1,21 @@
+program Find;
+var
+int : vector[3], vector1[3], res[5], i, j;
+
+main() {
+    vector[0] = 1;
+    vector[1] = 2;
+    vector[2] = 3;
+
+    vector1[0] = 4;
+    vector1[1] = 5;
+    vector1[2] = 3*2;
+
+    res = vector .^. vector1;
+
+    i = 0;
+    while (i < 5) {
+        print(res[i], "x^", i);
+        i = i + 1;
+    }
+}
