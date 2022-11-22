@@ -1,8 +1,8 @@
-from ply.src.ply import lex
-from ply.src.ply import yacc
+from lexyacc import lex
+from lexyacc import yacc
 from cuadruplos import Cuadruplo
 import sys
-sys.tracebacklimit = 0
+# sys.tracebacklimit = 0
 
 # --- Tokenizer
 
